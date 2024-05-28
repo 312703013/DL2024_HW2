@@ -1,0 +1,100 @@
+05/21/2024 09:25:16 - INFO - transformers.tokenization_utils_base - loading file tokenizer.model from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\tokenizer.model
+
+05/21/2024 09:25:16 - INFO - transformers.tokenization_utils_base - loading file tokenizer.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\tokenizer.json
+
+05/21/2024 09:25:16 - INFO - transformers.tokenization_utils_base - loading file added_tokens.json from cache at None
+
+05/21/2024 09:25:16 - INFO - transformers.tokenization_utils_base - loading file special_tokens_map.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\special_tokens_map.json
+
+05/21/2024 09:25:16 - INFO - transformers.tokenization_utils_base - loading file tokenizer_config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\tokenizer_config.json
+
+05/21/2024 09:25:17 - INFO - llamafactory.data.loader - Loading dataset QT2_2.json...
+
+05/21/2024 09:25:44 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\config.json
+
+05/21/2024 09:25:44 - INFO - transformers.configuration_utils - Model config GemmaConfig {
+  "_name_or_path": "google/gemma-2b",
+  "architectures": [
+    "GemmaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "head_dim": 256,
+  "hidden_act": "gelu",
+  "hidden_activation": null,
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 16384,
+  "max_position_embeddings": 8192,
+  "model_type": "gemma",
+  "num_attention_heads": 8,
+  "num_hidden_layers": 18,
+  "num_key_value_heads": 1,
+  "pad_token_id": 0,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 256000
+}
+
+
+05/21/2024 09:25:44 - WARNING - llamafactory.model.utils.attention - FlashAttention-2 is not installed.
+
+05/21/2024 09:25:44 - INFO - llamafactory.model.utils.quantization - Quantizing model to 4 bit.
+
+05/21/2024 09:25:44 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+05/21/2024 09:25:45 - INFO - transformers.modeling_utils - loading weights file model.safetensors from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\model.safetensors.index.json
+
+05/21/2024 09:25:45 - INFO - transformers.modeling_utils - Instantiating GemmaForCausalLM model under default dtype torch.bfloat16.
+
+05/21/2024 09:25:45 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+
+05/21/2024 09:25:45 - WARNING - transformers.models.gemma.modeling_gemma - `config.hidden_act` is ignored, you should use `config.hidden_activation` instead.
+Gemma's activation function will be set to `gelu_pytorch_tanh`. Please, use
+`config.hidden_activation` if you want to override this behaviour.
+See https://github.com/huggingface/transformers/pull/29402 for more details.
+
+05/21/2024 09:25:55 - INFO - transformers.modeling_utils - All model checkpoint weights were used when initializing GemmaForCausalLM.
+
+
+05/21/2024 09:25:55 - INFO - transformers.modeling_utils - All the weights of GemmaForCausalLM were initialized from the model checkpoint at google/gemma-2b.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use GemmaForCausalLM for predictions without further training.
+
+05/21/2024 09:25:56 - INFO - transformers.generation.configuration_utils - loading configuration file generation_config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--google--gemma-2b\snapshots\2ac59a5d7bf4e1425010f0d457dde7d146658953\generation_config.json
+
+05/21/2024 09:25:56 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+
+05/21/2024 09:25:56 - INFO - llamafactory.model.utils.attention - Using torch SDPA for faster training and inference.
+
+05/21/2024 09:25:56 - INFO - llamafactory.model.adapter - Upcasting trainable params to float32.
+
+05/21/2024 09:25:56 - INFO - llamafactory.model.adapter - Fine-tuning method: LoRA
+
+05/21/2024 09:25:56 - INFO - llamafactory.model.adapter - Loaded adapter(s): saves\Gemma-2B\lora\train_2024-05-20-23-44-24
+
+05/21/2024 09:25:56 - INFO - llamafactory.model.loader - all params: 2507094016
+
+05/21/2024 09:25:56 - INFO - transformers.trainer - ***** Running Prediction *****
+
+05/21/2024 09:25:56 - INFO - transformers.trainer -   Num examples = 1000
+
+05/21/2024 09:25:56 - INFO - transformers.trainer -   Batch size = 2
+
+05/21/2024 10:42:19 - INFO - llamafactory.train.sft.trainer - Saving prediction results to saves\Gemma-2B\lora\eval_2024-05-21-09-22-53\generated_predictions.jsonl
+
