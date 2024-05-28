@@ -1,0 +1,1920 @@
+05/19/2024 20:16:02 - INFO - transformers.tokenization_utils_base - loading file tokenizer.model from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\tokenizer.model
+
+05/19/2024 20:16:02 - INFO - transformers.tokenization_utils_base - loading file tokenizer.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\tokenizer.json
+
+05/19/2024 20:16:02 - INFO - transformers.tokenization_utils_base - loading file added_tokens.json from cache at None
+
+05/19/2024 20:16:02 - INFO - transformers.tokenization_utils_base - loading file special_tokens_map.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\special_tokens_map.json
+
+05/19/2024 20:16:02 - INFO - transformers.tokenization_utils_base - loading file tokenizer_config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\tokenizer_config.json
+
+05/19/2024 20:16:02 - INFO - llamafactory.data.loader - Loading dataset QuestionTest.json...
+
+05/19/2024 20:16:04 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:16:04 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "hfl/chinese-llama-2-1.3b",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:16:04 - WARNING - llamafactory.model.utils.attention - FlashAttention-2 is not installed.
+
+05/19/2024 20:16:04 - INFO - llamafactory.model.utils.quantization - Quantizing model to 4 bit.
+
+05/19/2024 20:16:05 - INFO - transformers.modeling_utils - loading weights file pytorch_model.bin from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\pytorch_model.bin
+
+05/19/2024 20:16:05 - INFO - transformers.modeling_utils - Instantiating LlamaForCausalLM model under default dtype torch.bfloat16.
+
+05/19/2024 20:16:05 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "max_length": 4096,
+  "pad_token_id": 0
+}
+
+
+05/19/2024 20:16:08 - INFO - transformers.modeling_utils - All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+
+05/19/2024 20:16:08 - INFO - transformers.modeling_utils - All the weights of LlamaForCausalLM were initialized from the model checkpoint at hfl/chinese-llama-2-1.3b.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+
+05/19/2024 20:16:09 - INFO - transformers.generation.configuration_utils - loading configuration file generation_config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\generation_config.json
+
+05/19/2024 20:16:09 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "pad_token_id": 0,
+  "temperature": 0.2,
+  "top_p": 0.9
+}
+
+
+05/19/2024 20:16:09 - INFO - llamafactory.model.utils.checkpointing - Gradient checkpointing enabled.
+
+05/19/2024 20:16:09 - INFO - llamafactory.model.utils.attention - Using torch SDPA for faster training and inference.
+
+05/19/2024 20:16:09 - INFO - llamafactory.model.adapter - DeepSpeed/FSDP/PureBF16/BAdam detected, remaining trainable params as their original precision.
+
+05/19/2024 20:16:09 - INFO - llamafactory.model.adapter - Fine-tuning method: LoRA
+
+05/19/2024 20:16:09 - INFO - llamafactory.model.loader - trainable params: 524288 || all params: 1263046656 || trainable%: 0.0415
+
+05/19/2024 20:16:09 - INFO - transformers.trainer - Using auto half precision backend
+
+05/19/2024 20:16:09 - INFO - llamafactory.train.utils - Using BAdam optimizer with layer-wise update, switch mode is ascending, switch block every 50 steps, default start block is None
+
+05/19/2024 20:16:09 - INFO - transformers.trainer - ***** Running training *****
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Num examples = 10,840
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Num Epochs = 3
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Instantaneous batch size per device = 2
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Total train batch size (w. parallel, distributed & accumulation) = 16
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Gradient Accumulation steps = 8
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Total optimization steps = 2,031
+
+05/19/2024 20:16:09 - INFO - transformers.trainer -   Number of trainable parameters = 131,072
+
+05/19/2024 20:16:21 - INFO - llamafactory.extras.callbacks - {'loss': 4.5114, 'learning_rate': 4.9999e-05, 'epoch': 0.01}
+
+05/19/2024 20:16:34 - INFO - llamafactory.extras.callbacks - {'loss': 4.3972, 'learning_rate': 4.9997e-05, 'epoch': 0.01}
+
+05/19/2024 20:16:47 - INFO - llamafactory.extras.callbacks - {'loss': 4.2366, 'learning_rate': 4.9993e-05, 'epoch': 0.02}
+
+05/19/2024 20:17:00 - INFO - llamafactory.extras.callbacks - {'loss': 4.1245, 'learning_rate': 4.9988e-05, 'epoch': 0.03}
+
+05/19/2024 20:17:12 - INFO - llamafactory.extras.callbacks - {'loss': 3.8876, 'learning_rate': 4.9981e-05, 'epoch': 0.04}
+
+05/19/2024 20:17:23 - INFO - llamafactory.extras.callbacks - {'loss': 3.7350, 'learning_rate': 4.9973e-05, 'epoch': 0.04}
+
+05/19/2024 20:17:36 - INFO - llamafactory.extras.callbacks - {'loss': 3.5377, 'learning_rate': 4.9963e-05, 'epoch': 0.05}
+
+05/19/2024 20:17:49 - INFO - llamafactory.extras.callbacks - {'loss': 3.3101, 'learning_rate': 4.9952e-05, 'epoch': 0.06}
+
+05/19/2024 20:18:02 - INFO - llamafactory.extras.callbacks - {'loss': 3.0727, 'learning_rate': 4.9939e-05, 'epoch': 0.07}
+
+05/19/2024 20:18:14 - INFO - llamafactory.extras.callbacks - {'loss': 2.8277, 'learning_rate': 4.9925e-05, 'epoch': 0.07}
+
+05/19/2024 20:18:25 - INFO - llamafactory.extras.callbacks - {'loss': 2.6602, 'learning_rate': 4.9910e-05, 'epoch': 0.08}
+
+05/19/2024 20:18:38 - INFO - llamafactory.extras.callbacks - {'loss': 2.5918, 'learning_rate': 4.9892e-05, 'epoch': 0.09}
+
+05/19/2024 20:18:50 - INFO - llamafactory.extras.callbacks - {'loss': 2.4056, 'learning_rate': 4.9874e-05, 'epoch': 0.10}
+
+05/19/2024 20:19:01 - INFO - llamafactory.extras.callbacks - {'loss': 2.1919, 'learning_rate': 4.9854e-05, 'epoch': 0.10}
+
+05/19/2024 20:19:13 - INFO - llamafactory.extras.callbacks - {'loss': 1.9905, 'learning_rate': 4.9832e-05, 'epoch': 0.11}
+
+05/19/2024 20:19:24 - INFO - llamafactory.extras.callbacks - {'loss': 1.7355, 'learning_rate': 4.9809e-05, 'epoch': 0.12}
+
+05/19/2024 20:19:36 - INFO - llamafactory.extras.callbacks - {'loss': 1.4906, 'learning_rate': 4.9784e-05, 'epoch': 0.13}
+
+05/19/2024 20:19:48 - INFO - llamafactory.extras.callbacks - {'loss': 1.2759, 'learning_rate': 4.9758e-05, 'epoch': 0.13}
+
+05/19/2024 20:19:59 - INFO - llamafactory.extras.callbacks - {'loss': 1.0506, 'learning_rate': 4.9731e-05, 'epoch': 0.14}
+
+05/19/2024 20:20:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.8021, 'learning_rate': 4.9702e-05, 'epoch': 0.15}
+
+05/19/2024 20:20:11 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:20:11 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:20:11 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:22:41 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-100
+
+05/19/2024 20:22:42 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:22:42 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:22:42 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-100\tokenizer_config.json
+
+05/19/2024 20:22:42 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-100\special_tokens_map.json
+
+05/19/2024 20:22:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.7185, 'learning_rate': 4.9671e-05, 'epoch': 0.15}
+
+05/19/2024 20:23:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.6782, 'learning_rate': 4.9639e-05, 'epoch': 0.16}
+
+05/19/2024 20:23:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.6072, 'learning_rate': 4.9606e-05, 'epoch': 0.17}
+
+05/19/2024 20:23:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.5293, 'learning_rate': 4.9571e-05, 'epoch': 0.18}
+
+05/19/2024 20:23:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.4428, 'learning_rate': 4.9534e-05, 'epoch': 0.18}
+
+05/19/2024 20:23:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.4010, 'learning_rate': 4.9496e-05, 'epoch': 0.19}
+
+05/19/2024 20:23:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.3189, 'learning_rate': 4.9457e-05, 'epoch': 0.20}
+
+05/19/2024 20:23:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.3148, 'learning_rate': 4.9416e-05, 'epoch': 0.21}
+
+05/19/2024 20:24:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.2633, 'learning_rate': 4.9374e-05, 'epoch': 0.21}
+
+05/19/2024 20:24:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.2194, 'learning_rate': 4.9330e-05, 'epoch': 0.22}
+
+05/19/2024 20:24:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.2358, 'learning_rate': 4.9285e-05, 'epoch': 0.23}
+
+05/19/2024 20:24:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.2284, 'learning_rate': 4.9238e-05, 'epoch': 0.24}
+
+05/19/2024 20:24:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.2172, 'learning_rate': 4.9190e-05, 'epoch': 0.24}
+
+05/19/2024 20:24:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.2035, 'learning_rate': 4.9141e-05, 'epoch': 0.25}
+
+05/19/2024 20:24:53 - INFO - llamafactory.extras.callbacks - {'loss': 0.1927, 'learning_rate': 4.9090e-05, 'epoch': 0.26}
+
+05/19/2024 20:25:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1985, 'learning_rate': 4.9037e-05, 'epoch': 0.27}
+
+05/19/2024 20:25:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1862, 'learning_rate': 4.8983e-05, 'epoch': 0.27}
+
+05/19/2024 20:25:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1892, 'learning_rate': 4.8928e-05, 'epoch': 0.28}
+
+05/19/2024 20:25:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1805, 'learning_rate': 4.8871e-05, 'epoch': 0.29}
+
+05/19/2024 20:25:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.2017, 'learning_rate': 4.8813e-05, 'epoch': 0.30}
+
+05/19/2024 20:25:31 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:25:31 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:25:31 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:27:55 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-200
+
+05/19/2024 20:27:56 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:27:56 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:27:56 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-200\tokenizer_config.json
+
+05/19/2024 20:27:56 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-200\special_tokens_map.json
+
+05/19/2024 20:28:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1768, 'learning_rate': 4.8754e-05, 'epoch': 0.30}
+
+05/19/2024 20:28:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.2207, 'learning_rate': 4.8693e-05, 'epoch': 0.31}
+
+05/19/2024 20:28:35 - INFO - llamafactory.extras.callbacks - {'loss': 0.1699, 'learning_rate': 4.8630e-05, 'epoch': 0.32}
+
+05/19/2024 20:28:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1729, 'learning_rate': 4.8566e-05, 'epoch': 0.32}
+
+05/19/2024 20:29:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1701, 'learning_rate': 4.8501e-05, 'epoch': 0.33}
+
+05/19/2024 20:29:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1657, 'learning_rate': 4.8434e-05, 'epoch': 0.34}
+
+05/19/2024 20:29:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1716, 'learning_rate': 4.8366e-05, 'epoch': 0.35}
+
+05/19/2024 20:29:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1976, 'learning_rate': 4.8297e-05, 'epoch': 0.35}
+
+05/19/2024 20:29:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1753, 'learning_rate': 4.8226e-05, 'epoch': 0.36}
+
+05/19/2024 20:30:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1778, 'learning_rate': 4.8154e-05, 'epoch': 0.37}
+
+05/19/2024 20:30:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1643, 'learning_rate': 4.8080e-05, 'epoch': 0.38}
+
+05/19/2024 20:30:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1725, 'learning_rate': 4.8005e-05, 'epoch': 0.38}
+
+05/19/2024 20:30:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1667, 'learning_rate': 4.7929e-05, 'epoch': 0.39}
+
+05/19/2024 20:30:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1672, 'learning_rate': 4.7851e-05, 'epoch': 0.40}
+
+05/19/2024 20:30:58 - INFO - llamafactory.extras.callbacks - {'loss': 0.1889, 'learning_rate': 4.7772e-05, 'epoch': 0.41}
+
+05/19/2024 20:31:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1903, 'learning_rate': 4.7692e-05, 'epoch': 0.41}
+
+05/19/2024 20:31:21 - INFO - llamafactory.extras.callbacks - {'loss': 0.1636, 'learning_rate': 4.7610e-05, 'epoch': 0.42}
+
+05/19/2024 20:31:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1653, 'learning_rate': 4.7527e-05, 'epoch': 0.43}
+
+05/19/2024 20:31:44 - INFO - llamafactory.extras.callbacks - {'loss': 0.1596, 'learning_rate': 4.7442e-05, 'epoch': 0.44}
+
+05/19/2024 20:31:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1762, 'learning_rate': 4.7356e-05, 'epoch': 0.44}
+
+05/19/2024 20:31:55 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:31:55 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:31:55 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:34:18 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-300
+
+05/19/2024 20:34:19 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:34:19 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:34:19 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-300\tokenizer_config.json
+
+05/19/2024 20:34:19 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-300\special_tokens_map.json
+
+05/19/2024 20:34:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1590, 'learning_rate': 4.7269e-05, 'epoch': 0.45}
+
+05/19/2024 20:34:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1873, 'learning_rate': 4.7180e-05, 'epoch': 0.46}
+
+05/19/2024 20:34:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1638, 'learning_rate': 4.7091e-05, 'epoch': 0.46}
+
+05/19/2024 20:34:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1812, 'learning_rate': 4.6999e-05, 'epoch': 0.47}
+
+05/19/2024 20:35:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1609, 'learning_rate': 4.6907e-05, 'epoch': 0.48}
+
+05/19/2024 20:35:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1814, 'learning_rate': 4.6813e-05, 'epoch': 0.49}
+
+05/19/2024 20:35:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1570, 'learning_rate': 4.6718e-05, 'epoch': 0.49}
+
+05/19/2024 20:35:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1641, 'learning_rate': 4.6622e-05, 'epoch': 0.50}
+
+05/19/2024 20:35:44 - INFO - llamafactory.extras.callbacks - {'loss': 0.1784, 'learning_rate': 4.6524e-05, 'epoch': 0.51}
+
+05/19/2024 20:35:53 - INFO - llamafactory.extras.callbacks - {'loss': 0.1757, 'learning_rate': 4.6425e-05, 'epoch': 0.52}
+
+05/19/2024 20:36:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1622, 'learning_rate': 4.6325e-05, 'epoch': 0.52}
+
+05/19/2024 20:36:09 - INFO - llamafactory.extras.callbacks - {'loss': 0.1528, 'learning_rate': 4.6223e-05, 'epoch': 0.53}
+
+05/19/2024 20:36:17 - INFO - llamafactory.extras.callbacks - {'loss': 0.1611, 'learning_rate': 4.6120e-05, 'epoch': 0.54}
+
+05/19/2024 20:36:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1662, 'learning_rate': 4.6016e-05, 'epoch': 0.55}
+
+05/19/2024 20:36:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 4.5911e-05, 'epoch': 0.55}
+
+05/19/2024 20:36:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1615, 'learning_rate': 4.5804e-05, 'epoch': 0.56}
+
+05/19/2024 20:36:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1603, 'learning_rate': 4.5696e-05, 'epoch': 0.57}
+
+05/19/2024 20:36:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 4.5587e-05, 'epoch': 0.58}
+
+05/19/2024 20:37:05 - INFO - llamafactory.extras.callbacks - {'loss': 0.1576, 'learning_rate': 4.5477e-05, 'epoch': 0.58}
+
+05/19/2024 20:37:13 - INFO - llamafactory.extras.callbacks - {'loss': 0.1622, 'learning_rate': 4.5365e-05, 'epoch': 0.59}
+
+05/19/2024 20:37:14 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:37:14 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:37:14 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:39:36 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-400
+
+05/19/2024 20:39:37 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:39:37 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:39:37 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-400\tokenizer_config.json
+
+05/19/2024 20:39:37 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-400\special_tokens_map.json
+
+05/19/2024 20:39:50 - INFO - llamafactory.extras.callbacks - {'loss': 0.1569, 'learning_rate': 4.5253e-05, 'epoch': 0.60}
+
+05/19/2024 20:40:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 4.5139e-05, 'epoch': 0.61}
+
+05/19/2024 20:40:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1662, 'learning_rate': 4.5024e-05, 'epoch': 0.61}
+
+05/19/2024 20:40:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1582, 'learning_rate': 4.4907e-05, 'epoch': 0.62}
+
+05/19/2024 20:40:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1589, 'learning_rate': 4.4790e-05, 'epoch': 0.63}
+
+05/19/2024 20:40:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1743, 'learning_rate': 4.4671e-05, 'epoch': 0.63}
+
+05/19/2024 20:41:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 4.4551e-05, 'epoch': 0.64}
+
+05/19/2024 20:41:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1606, 'learning_rate': 4.4430e-05, 'epoch': 0.65}
+
+05/19/2024 20:41:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1749, 'learning_rate': 4.4308e-05, 'epoch': 0.66}
+
+05/19/2024 20:41:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1680, 'learning_rate': 4.4184e-05, 'epoch': 0.66}
+
+05/19/2024 20:41:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1611, 'learning_rate': 4.4060e-05, 'epoch': 0.67}
+
+05/19/2024 20:42:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1814, 'learning_rate': 4.3934e-05, 'epoch': 0.68}
+
+05/19/2024 20:42:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1751, 'learning_rate': 4.3807e-05, 'epoch': 0.69}
+
+05/19/2024 20:42:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1580, 'learning_rate': 4.3679e-05, 'epoch': 0.69}
+
+05/19/2024 20:42:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 4.3550e-05, 'epoch': 0.70}
+
+05/19/2024 20:42:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1649, 'learning_rate': 4.3420e-05, 'epoch': 0.71}
+
+05/19/2024 20:43:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1627, 'learning_rate': 4.3289e-05, 'epoch': 0.72}
+
+05/19/2024 20:43:13 - INFO - llamafactory.extras.callbacks - {'loss': 0.1579, 'learning_rate': 4.3156e-05, 'epoch': 0.72}
+
+05/19/2024 20:43:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1597, 'learning_rate': 4.3023e-05, 'epoch': 0.73}
+
+05/19/2024 20:43:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1573, 'learning_rate': 4.2888e-05, 'epoch': 0.74}
+
+05/19/2024 20:43:34 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:43:34 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:43:34 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:45:57 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-500
+
+05/19/2024 20:45:58 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:45:58 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:45:58 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-500\tokenizer_config.json
+
+05/19/2024 20:45:58 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-500\special_tokens_map.json
+
+05/19/2024 20:46:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1734, 'learning_rate': 4.2753e-05, 'epoch': 0.75}
+
+05/19/2024 20:46:17 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 4.2616e-05, 'epoch': 0.75}
+
+05/19/2024 20:46:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1557, 'learning_rate': 4.2478e-05, 'epoch': 0.76}
+
+05/19/2024 20:46:35 - INFO - llamafactory.extras.callbacks - {'loss': 0.1638, 'learning_rate': 4.2340e-05, 'epoch': 0.77}
+
+05/19/2024 20:46:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1583, 'learning_rate': 4.2200e-05, 'epoch': 0.77}
+
+05/19/2024 20:46:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1583, 'learning_rate': 4.2059e-05, 'epoch': 0.78}
+
+05/19/2024 20:47:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1574, 'learning_rate': 4.1917e-05, 'epoch': 0.79}
+
+05/19/2024 20:47:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1624, 'learning_rate': 4.1774e-05, 'epoch': 0.80}
+
+05/19/2024 20:47:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.1601, 'learning_rate': 4.1630e-05, 'epoch': 0.80}
+
+05/19/2024 20:47:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1547, 'learning_rate': 4.1485e-05, 'epoch': 0.81}
+
+05/19/2024 20:47:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1849, 'learning_rate': 4.1340e-05, 'epoch': 0.82}
+
+05/19/2024 20:47:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1581, 'learning_rate': 4.1193e-05, 'epoch': 0.83}
+
+05/19/2024 20:47:54 - INFO - llamafactory.extras.callbacks - {'loss': 0.1589, 'learning_rate': 4.1045e-05, 'epoch': 0.83}
+
+05/19/2024 20:48:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1605, 'learning_rate': 4.0896e-05, 'epoch': 0.84}
+
+05/19/2024 20:48:09 - INFO - llamafactory.extras.callbacks - {'loss': 0.1740, 'learning_rate': 4.0747e-05, 'epoch': 0.85}
+
+05/19/2024 20:48:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1698, 'learning_rate': 4.0596e-05, 'epoch': 0.86}
+
+05/19/2024 20:48:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1560, 'learning_rate': 4.0444e-05, 'epoch': 0.86}
+
+05/19/2024 20:48:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.1615, 'learning_rate': 4.0292e-05, 'epoch': 0.87}
+
+05/19/2024 20:48:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1692, 'learning_rate': 4.0138e-05, 'epoch': 0.88}
+
+05/19/2024 20:48:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1739, 'learning_rate': 3.9984e-05, 'epoch': 0.89}
+
+05/19/2024 20:48:47 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:48:47 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:48:47 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:51:12 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-600
+
+05/19/2024 20:51:12 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:51:12 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:51:12 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-600\tokenizer_config.json
+
+05/19/2024 20:51:12 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-600\special_tokens_map.json
+
+05/19/2024 20:51:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1666, 'learning_rate': 3.9829e-05, 'epoch': 0.89}
+
+05/19/2024 20:51:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1644, 'learning_rate': 3.9673e-05, 'epoch': 0.90}
+
+05/19/2024 20:51:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1572, 'learning_rate': 3.9516e-05, 'epoch': 0.91}
+
+05/19/2024 20:52:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1550, 'learning_rate': 3.9358e-05, 'epoch': 0.92}
+
+05/19/2024 20:52:17 - INFO - llamafactory.extras.callbacks - {'loss': 0.1608, 'learning_rate': 3.9199e-05, 'epoch': 0.92}
+
+05/19/2024 20:52:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1510, 'learning_rate': 3.9040e-05, 'epoch': 0.93}
+
+05/19/2024 20:52:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1543, 'learning_rate': 3.8879e-05, 'epoch': 0.94}
+
+05/19/2024 20:52:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1680, 'learning_rate': 3.8718e-05, 'epoch': 0.94}
+
+05/19/2024 20:53:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1567, 'learning_rate': 3.8556e-05, 'epoch': 0.95}
+
+05/19/2024 20:53:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1547, 'learning_rate': 3.8393e-05, 'epoch': 0.96}
+
+05/19/2024 20:53:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.1578, 'learning_rate': 3.8229e-05, 'epoch': 0.97}
+
+05/19/2024 20:53:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1666, 'learning_rate': 3.8065e-05, 'epoch': 0.97}
+
+05/19/2024 20:53:53 - INFO - llamafactory.extras.callbacks - {'loss': 0.1582, 'learning_rate': 3.7900e-05, 'epoch': 0.98}
+
+05/19/2024 20:54:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 3.7734e-05, 'epoch': 0.99}
+
+05/19/2024 20:54:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1628, 'learning_rate': 3.7567e-05, 'epoch': 1.00}
+
+05/19/2024 20:54:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1685, 'learning_rate': 3.7399e-05, 'epoch': 1.00}
+
+05/19/2024 20:54:37 - INFO - llamafactory.extras.callbacks - {'loss': 0.1548, 'learning_rate': 3.7231e-05, 'epoch': 1.01}
+
+05/19/2024 20:54:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 3.7062e-05, 'epoch': 1.02}
+
+05/19/2024 20:54:58 - INFO - llamafactory.extras.callbacks - {'loss': 0.1615, 'learning_rate': 3.6892e-05, 'epoch': 1.03}
+
+05/19/2024 20:55:09 - INFO - llamafactory.extras.callbacks - {'loss': 0.1600, 'learning_rate': 3.6722e-05, 'epoch': 1.03}
+
+05/19/2024 20:55:09 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 20:55:09 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 20:55:09 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 20:57:32 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-700
+
+05/19/2024 20:57:33 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 20:57:33 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 20:57:33 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-700\tokenizer_config.json
+
+05/19/2024 20:57:33 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-700\special_tokens_map.json
+
+05/19/2024 20:57:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1829, 'learning_rate': 3.6551e-05, 'epoch': 1.04}
+
+05/19/2024 20:57:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1570, 'learning_rate': 3.6379e-05, 'epoch': 1.05}
+
+05/19/2024 20:58:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1603, 'learning_rate': 3.6207e-05, 'epoch': 1.06}
+
+05/19/2024 20:58:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1711, 'learning_rate': 3.6033e-05, 'epoch': 1.06}
+
+05/19/2024 20:58:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1589, 'learning_rate': 3.5860e-05, 'epoch': 1.07}
+
+05/19/2024 20:58:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1600, 'learning_rate': 3.5685e-05, 'epoch': 1.08}
+
+05/19/2024 20:58:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1562, 'learning_rate': 3.5510e-05, 'epoch': 1.08}
+
+05/19/2024 20:58:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1595, 'learning_rate': 3.5334e-05, 'epoch': 1.09}
+
+05/19/2024 20:58:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1511, 'learning_rate': 3.5158e-05, 'epoch': 1.10}
+
+05/19/2024 20:59:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1552, 'learning_rate': 3.4981e-05, 'epoch': 1.11}
+
+05/19/2024 20:59:13 - INFO - llamafactory.extras.callbacks - {'loss': 0.1525, 'learning_rate': 3.4803e-05, 'epoch': 1.11}
+
+05/19/2024 20:59:21 - INFO - llamafactory.extras.callbacks - {'loss': 0.1623, 'learning_rate': 3.4625e-05, 'epoch': 1.12}
+
+05/19/2024 20:59:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1553, 'learning_rate': 3.4446e-05, 'epoch': 1.13}
+
+05/19/2024 20:59:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1529, 'learning_rate': 3.4267e-05, 'epoch': 1.14}
+
+05/19/2024 20:59:44 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 3.4087e-05, 'epoch': 1.14}
+
+05/19/2024 20:59:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1589, 'learning_rate': 3.3907e-05, 'epoch': 1.15}
+
+05/19/2024 20:59:58 - INFO - llamafactory.extras.callbacks - {'loss': 0.1658, 'learning_rate': 3.3726e-05, 'epoch': 1.16}
+
+05/19/2024 21:00:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1550, 'learning_rate': 3.3544e-05, 'epoch': 1.17}
+
+05/19/2024 21:00:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1538, 'learning_rate': 3.3362e-05, 'epoch': 1.17}
+
+05/19/2024 21:00:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1598, 'learning_rate': 3.3180e-05, 'epoch': 1.18}
+
+05/19/2024 21:00:22 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:00:22 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:00:22 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:02:45 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-800
+
+05/19/2024 21:02:46 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:02:46 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:02:46 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-800\tokenizer_config.json
+
+05/19/2024 21:02:46 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-800\special_tokens_map.json
+
+05/19/2024 21:02:59 - INFO - llamafactory.extras.callbacks - {'loss': 0.1595, 'learning_rate': 3.2997e-05, 'epoch': 1.19}
+
+05/19/2024 21:03:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1603, 'learning_rate': 3.2814e-05, 'epoch': 1.20}
+
+05/19/2024 21:03:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1575, 'learning_rate': 3.2630e-05, 'epoch': 1.20}
+
+05/19/2024 21:03:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1752, 'learning_rate': 3.2445e-05, 'epoch': 1.21}
+
+05/19/2024 21:03:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1696, 'learning_rate': 3.2261e-05, 'epoch': 1.22}
+
+05/19/2024 21:04:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1560, 'learning_rate': 3.2075e-05, 'epoch': 1.23}
+
+05/19/2024 21:04:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1571, 'learning_rate': 3.1890e-05, 'epoch': 1.23}
+
+05/19/2024 21:04:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.1563, 'learning_rate': 3.1704e-05, 'epoch': 1.24}
+
+05/19/2024 21:04:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1521, 'learning_rate': 3.1517e-05, 'epoch': 1.25}
+
+05/19/2024 21:04:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1538, 'learning_rate': 3.1330e-05, 'epoch': 1.25}
+
+05/19/2024 21:05:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1587, 'learning_rate': 3.1143e-05, 'epoch': 1.26}
+
+05/19/2024 21:05:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1718, 'learning_rate': 3.0955e-05, 'epoch': 1.27}
+
+05/19/2024 21:05:30 - INFO - llamafactory.extras.callbacks - {'loss': 0.1670, 'learning_rate': 3.0767e-05, 'epoch': 1.28}
+
+05/19/2024 21:05:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1584, 'learning_rate': 3.0579e-05, 'epoch': 1.28}
+
+05/19/2024 21:05:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1701, 'learning_rate': 3.0391e-05, 'epoch': 1.29}
+
+05/19/2024 21:06:02 - INFO - llamafactory.extras.callbacks - {'loss': 0.1551, 'learning_rate': 3.0202e-05, 'epoch': 1.30}
+
+05/19/2024 21:06:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1610, 'learning_rate': 3.0012e-05, 'epoch': 1.31}
+
+05/19/2024 21:06:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 2.9823e-05, 'epoch': 1.31}
+
+05/19/2024 21:06:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 2.9633e-05, 'epoch': 1.32}
+
+05/19/2024 21:06:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1731, 'learning_rate': 2.9443e-05, 'epoch': 1.33}
+
+05/19/2024 21:06:47 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:06:47 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:06:47 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:09:10 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-900
+
+05/19/2024 21:09:11 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:09:11 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:09:11 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-900\tokenizer_config.json
+
+05/19/2024 21:09:11 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-900\special_tokens_map.json
+
+05/19/2024 21:09:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1550, 'learning_rate': 2.9252e-05, 'epoch': 1.34}
+
+05/19/2024 21:09:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1571, 'learning_rate': 2.9062e-05, 'epoch': 1.34}
+
+05/19/2024 21:09:37 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 2.8871e-05, 'epoch': 1.35}
+
+05/19/2024 21:09:46 - INFO - llamafactory.extras.callbacks - {'loss': 0.1563, 'learning_rate': 2.8680e-05, 'epoch': 1.36}
+
+05/19/2024 21:09:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1564, 'learning_rate': 2.8488e-05, 'epoch': 1.37}
+
+05/19/2024 21:10:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1681, 'learning_rate': 2.8297e-05, 'epoch': 1.37}
+
+05/19/2024 21:10:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1546, 'learning_rate': 2.8105e-05, 'epoch': 1.38}
+
+05/19/2024 21:10:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.1546, 'learning_rate': 2.7913e-05, 'epoch': 1.39}
+
+05/19/2024 21:10:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1547, 'learning_rate': 2.7721e-05, 'epoch': 1.39}
+
+05/19/2024 21:10:41 - INFO - llamafactory.extras.callbacks - {'loss': 0.1572, 'learning_rate': 2.7529e-05, 'epoch': 1.40}
+
+05/19/2024 21:10:49 - INFO - llamafactory.extras.callbacks - {'loss': 0.1736, 'learning_rate': 2.7336e-05, 'epoch': 1.41}
+
+05/19/2024 21:10:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1593, 'learning_rate': 2.7144e-05, 'epoch': 1.42}
+
+05/19/2024 21:11:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1659, 'learning_rate': 2.6951e-05, 'epoch': 1.42}
+
+05/19/2024 21:11:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1541, 'learning_rate': 2.6758e-05, 'epoch': 1.43}
+
+05/19/2024 21:11:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1686, 'learning_rate': 2.6565e-05, 'epoch': 1.44}
+
+05/19/2024 21:11:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1580, 'learning_rate': 2.6372e-05, 'epoch': 1.45}
+
+05/19/2024 21:11:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1645, 'learning_rate': 2.6179e-05, 'epoch': 1.45}
+
+05/19/2024 21:11:41 - INFO - llamafactory.extras.callbacks - {'loss': 0.1666, 'learning_rate': 2.5986e-05, 'epoch': 1.46}
+
+05/19/2024 21:11:49 - INFO - llamafactory.extras.callbacks - {'loss': 0.1638, 'learning_rate': 2.5793e-05, 'epoch': 1.47}
+
+05/19/2024 21:11:58 - INFO - llamafactory.extras.callbacks - {'loss': 0.1581, 'learning_rate': 2.5599e-05, 'epoch': 1.48}
+
+05/19/2024 21:11:58 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:11:58 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:11:58 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:14:20 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1000
+
+05/19/2024 21:14:21 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:14:21 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:14:21 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1000\tokenizer_config.json
+
+05/19/2024 21:14:21 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1000\special_tokens_map.json
+
+05/19/2024 21:14:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1535, 'learning_rate': 2.5406e-05, 'epoch': 1.48}
+
+05/19/2024 21:14:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1537, 'learning_rate': 2.5213e-05, 'epoch': 1.49}
+
+05/19/2024 21:14:59 - INFO - llamafactory.extras.callbacks - {'loss': 0.1575, 'learning_rate': 2.5019e-05, 'epoch': 1.50}
+
+05/19/2024 21:15:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 2.4826e-05, 'epoch': 1.51}
+
+05/19/2024 21:15:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 2.4633e-05, 'epoch': 1.51}
+
+05/19/2024 21:15:37 - INFO - llamafactory.extras.callbacks - {'loss': 0.1555, 'learning_rate': 2.4439e-05, 'epoch': 1.52}
+
+05/19/2024 21:15:50 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 2.4246e-05, 'epoch': 1.53}
+
+05/19/2024 21:16:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1530, 'learning_rate': 2.4053e-05, 'epoch': 1.54}
+
+05/19/2024 21:16:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1549, 'learning_rate': 2.3860e-05, 'epoch': 1.54}
+
+05/19/2024 21:16:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 2.3667e-05, 'epoch': 1.55}
+
+05/19/2024 21:16:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1528, 'learning_rate': 2.3473e-05, 'epoch': 1.56}
+
+05/19/2024 21:16:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1633, 'learning_rate': 2.3281e-05, 'epoch': 1.56}
+
+05/19/2024 21:17:02 - INFO - llamafactory.extras.callbacks - {'loss': 0.1599, 'learning_rate': 2.3088e-05, 'epoch': 1.57}
+
+05/19/2024 21:17:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1555, 'learning_rate': 2.2895e-05, 'epoch': 1.58}
+
+05/19/2024 21:17:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1869, 'learning_rate': 2.2702e-05, 'epoch': 1.59}
+
+05/19/2024 21:17:35 - INFO - llamafactory.extras.callbacks - {'loss': 0.1525, 'learning_rate': 2.2510e-05, 'epoch': 1.59}
+
+05/19/2024 21:17:46 - INFO - llamafactory.extras.callbacks - {'loss': 0.1520, 'learning_rate': 2.2318e-05, 'epoch': 1.60}
+
+05/19/2024 21:17:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 2.2125e-05, 'epoch': 1.61}
+
+05/19/2024 21:18:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1533, 'learning_rate': 2.1933e-05, 'epoch': 1.62}
+
+05/19/2024 21:18:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1529, 'learning_rate': 2.1742e-05, 'epoch': 1.62}
+
+05/19/2024 21:18:19 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:18:19 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:18:19 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:20:42 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1100
+
+05/19/2024 21:20:42 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:20:42 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:20:42 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1100\tokenizer_config.json
+
+05/19/2024 21:20:42 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1100\special_tokens_map.json
+
+05/19/2024 21:20:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1593, 'learning_rate': 2.1550e-05, 'epoch': 1.63}
+
+05/19/2024 21:21:02 - INFO - llamafactory.extras.callbacks - {'loss': 0.1685, 'learning_rate': 2.1359e-05, 'epoch': 1.64}
+
+05/19/2024 21:21:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 2.1167e-05, 'epoch': 1.65}
+
+05/19/2024 21:21:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1517, 'learning_rate': 2.0977e-05, 'epoch': 1.65}
+
+05/19/2024 21:21:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1562, 'learning_rate': 2.0786e-05, 'epoch': 1.66}
+
+05/19/2024 21:21:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1559, 'learning_rate': 2.0595e-05, 'epoch': 1.67}
+
+05/19/2024 21:21:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1653, 'learning_rate': 2.0405e-05, 'epoch': 1.68}
+
+05/19/2024 21:21:58 - INFO - llamafactory.extras.callbacks - {'loss': 0.1498, 'learning_rate': 2.0215e-05, 'epoch': 1.68}
+
+05/19/2024 21:22:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1650, 'learning_rate': 2.0026e-05, 'epoch': 1.69}
+
+05/19/2024 21:22:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1547, 'learning_rate': 1.9836e-05, 'epoch': 1.70}
+
+05/19/2024 21:22:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 1.9647e-05, 'epoch': 1.70}
+
+05/19/2024 21:22:30 - INFO - llamafactory.extras.callbacks - {'loss': 0.1687, 'learning_rate': 1.9459e-05, 'epoch': 1.71}
+
+05/19/2024 21:22:37 - INFO - llamafactory.extras.callbacks - {'loss': 0.1650, 'learning_rate': 1.9270e-05, 'epoch': 1.72}
+
+05/19/2024 21:22:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1619, 'learning_rate': 1.9082e-05, 'epoch': 1.73}
+
+05/19/2024 21:22:53 - INFO - llamafactory.extras.callbacks - {'loss': 0.1964, 'learning_rate': 1.8894e-05, 'epoch': 1.73}
+
+05/19/2024 21:23:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1525, 'learning_rate': 1.8707e-05, 'epoch': 1.74}
+
+05/19/2024 21:23:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1562, 'learning_rate': 1.8520e-05, 'epoch': 1.75}
+
+05/19/2024 21:23:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1564, 'learning_rate': 1.8334e-05, 'epoch': 1.76}
+
+05/19/2024 21:23:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.1553, 'learning_rate': 1.8147e-05, 'epoch': 1.76}
+
+05/19/2024 21:23:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1582, 'learning_rate': 1.7962e-05, 'epoch': 1.77}
+
+05/19/2024 21:23:32 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:23:32 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:23:32 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:25:55 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1200
+
+05/19/2024 21:25:55 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:25:55 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:25:55 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1200\tokenizer_config.json
+
+05/19/2024 21:25:55 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1200\special_tokens_map.json
+
+05/19/2024 21:26:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1645, 'learning_rate': 1.7776e-05, 'epoch': 1.78}
+
+05/19/2024 21:26:21 - INFO - llamafactory.extras.callbacks - {'loss': 0.1739, 'learning_rate': 1.7592e-05, 'epoch': 1.79}
+
+05/19/2024 21:26:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1503, 'learning_rate': 1.7407e-05, 'epoch': 1.79}
+
+05/19/2024 21:26:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 1.7223e-05, 'epoch': 1.80}
+
+05/19/2024 21:27:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1533, 'learning_rate': 1.7040e-05, 'epoch': 1.81}
+
+05/19/2024 21:27:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1562, 'learning_rate': 1.6857e-05, 'epoch': 1.82}
+
+05/19/2024 21:27:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 1.6674e-05, 'epoch': 1.82}
+
+05/19/2024 21:27:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1491, 'learning_rate': 1.6492e-05, 'epoch': 1.83}
+
+05/19/2024 21:27:50 - INFO - llamafactory.extras.callbacks - {'loss': 0.1616, 'learning_rate': 1.6310e-05, 'epoch': 1.84}
+
+05/19/2024 21:28:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1543, 'learning_rate': 1.6129e-05, 'epoch': 1.85}
+
+05/19/2024 21:28:14 - INFO - llamafactory.extras.callbacks - {'loss': 0.1647, 'learning_rate': 1.5949e-05, 'epoch': 1.85}
+
+05/19/2024 21:28:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1571, 'learning_rate': 1.5769e-05, 'epoch': 1.86}
+
+05/19/2024 21:28:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1547, 'learning_rate': 1.5589e-05, 'epoch': 1.87}
+
+05/19/2024 21:28:46 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 1.5411e-05, 'epoch': 1.87}
+
+05/19/2024 21:28:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1537, 'learning_rate': 1.5232e-05, 'epoch': 1.88}
+
+05/19/2024 21:29:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 1.5055e-05, 'epoch': 1.89}
+
+05/19/2024 21:29:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1538, 'learning_rate': 1.4878e-05, 'epoch': 1.90}
+
+05/19/2024 21:29:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1569, 'learning_rate': 1.4701e-05, 'epoch': 1.90}
+
+05/19/2024 21:29:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1580, 'learning_rate': 1.4525e-05, 'epoch': 1.91}
+
+05/19/2024 21:29:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1651, 'learning_rate': 1.4350e-05, 'epoch': 1.92}
+
+05/19/2024 21:29:51 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:29:51 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:29:51 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:32:14 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1300
+
+05/19/2024 21:32:15 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:32:15 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:32:15 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1300\tokenizer_config.json
+
+05/19/2024 21:32:15 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1300\special_tokens_map.json
+
+05/19/2024 21:32:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1578, 'learning_rate': 1.4175e-05, 'epoch': 1.93}
+
+05/19/2024 21:32:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1585, 'learning_rate': 1.4001e-05, 'epoch': 1.93}
+
+05/19/2024 21:32:43 - INFO - llamafactory.extras.callbacks - {'loss': 0.1669, 'learning_rate': 1.3828e-05, 'epoch': 1.94}
+
+05/19/2024 21:32:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 1.3655e-05, 'epoch': 1.95}
+
+05/19/2024 21:33:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1637, 'learning_rate': 1.3483e-05, 'epoch': 1.96}
+
+05/19/2024 21:33:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1557, 'learning_rate': 1.3312e-05, 'epoch': 1.96}
+
+05/19/2024 21:33:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1566, 'learning_rate': 1.3142e-05, 'epoch': 1.97}
+
+05/19/2024 21:33:29 - INFO - llamafactory.extras.callbacks - {'loss': 0.1627, 'learning_rate': 1.2972e-05, 'epoch': 1.98}
+
+05/19/2024 21:33:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1562, 'learning_rate': 1.2803e-05, 'epoch': 1.99}
+
+05/19/2024 21:33:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1558, 'learning_rate': 1.2634e-05, 'epoch': 1.99}
+
+05/19/2024 21:33:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1549, 'learning_rate': 1.2467e-05, 'epoch': 2.00}
+
+05/19/2024 21:34:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1574, 'learning_rate': 1.2300e-05, 'epoch': 2.01}
+
+05/19/2024 21:34:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1510, 'learning_rate': 1.2133e-05, 'epoch': 2.01}
+
+05/19/2024 21:34:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1550, 'learning_rate': 1.1968e-05, 'epoch': 2.02}
+
+05/19/2024 21:34:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1519, 'learning_rate': 1.1803e-05, 'epoch': 2.03}
+
+05/19/2024 21:34:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1610, 'learning_rate': 1.1640e-05, 'epoch': 2.04}
+
+05/19/2024 21:34:41 - INFO - llamafactory.extras.callbacks - {'loss': 0.1644, 'learning_rate': 1.1477e-05, 'epoch': 2.04}
+
+05/19/2024 21:34:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1564, 'learning_rate': 1.1314e-05, 'epoch': 2.05}
+
+05/19/2024 21:34:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1521, 'learning_rate': 1.1153e-05, 'epoch': 2.06}
+
+05/19/2024 21:35:05 - INFO - llamafactory.extras.callbacks - {'loss': 0.1542, 'learning_rate': 1.0992e-05, 'epoch': 2.07}
+
+05/19/2024 21:35:05 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:35:05 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:35:05 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:37:28 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1400
+
+05/19/2024 21:37:29 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:37:29 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:37:29 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1400\tokenizer_config.json
+
+05/19/2024 21:37:29 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1400\special_tokens_map.json
+
+05/19/2024 21:37:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1542, 'learning_rate': 1.0833e-05, 'epoch': 2.07}
+
+05/19/2024 21:37:54 - INFO - llamafactory.extras.callbacks - {'loss': 0.1620, 'learning_rate': 1.0674e-05, 'epoch': 2.08}
+
+05/19/2024 21:38:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1708, 'learning_rate': 1.0516e-05, 'epoch': 2.09}
+
+05/19/2024 21:38:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1649, 'learning_rate': 1.0359e-05, 'epoch': 2.10}
+
+05/19/2024 21:38:32 - INFO - llamafactory.extras.callbacks - {'loss': 0.1574, 'learning_rate': 1.0202e-05, 'epoch': 2.10}
+
+05/19/2024 21:38:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1587, 'learning_rate': 1.0047e-05, 'epoch': 2.11}
+
+05/19/2024 21:38:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1610, 'learning_rate': 9.8924e-06, 'epoch': 2.12}
+
+05/19/2024 21:39:09 - INFO - llamafactory.extras.callbacks - {'loss': 0.1525, 'learning_rate': 9.7388e-06, 'epoch': 2.13}
+
+05/19/2024 21:39:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1489, 'learning_rate': 9.5861e-06, 'epoch': 2.13}
+
+05/19/2024 21:39:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1582, 'learning_rate': 9.4344e-06, 'epoch': 2.14}
+
+05/19/2024 21:39:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1576, 'learning_rate': 9.2835e-06, 'epoch': 2.15}
+
+05/19/2024 21:39:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1645, 'learning_rate': 9.1336e-06, 'epoch': 2.15}
+
+05/19/2024 21:40:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1572, 'learning_rate': 8.9847e-06, 'epoch': 2.16}
+
+05/19/2024 21:40:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1570, 'learning_rate': 8.8367e-06, 'epoch': 2.17}
+
+05/19/2024 21:40:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 8.6897e-06, 'epoch': 2.18}
+
+05/19/2024 21:40:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1523, 'learning_rate': 8.5436e-06, 'epoch': 2.18}
+
+05/19/2024 21:40:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1532, 'learning_rate': 8.3986e-06, 'epoch': 2.19}
+
+05/19/2024 21:41:02 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 8.2545e-06, 'epoch': 2.20}
+
+05/19/2024 21:41:13 - INFO - llamafactory.extras.callbacks - {'loss': 0.1546, 'learning_rate': 8.1114e-06, 'epoch': 2.21}
+
+05/19/2024 21:41:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1569, 'learning_rate': 7.9694e-06, 'epoch': 2.21}
+
+05/19/2024 21:41:24 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:41:24 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:41:24 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:43:46 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1500
+
+05/19/2024 21:43:47 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:43:47 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:43:47 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1500\tokenizer_config.json
+
+05/19/2024 21:43:47 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1500\special_tokens_map.json
+
+05/19/2024 21:43:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1629, 'learning_rate': 7.8283e-06, 'epoch': 2.22}
+
+05/19/2024 21:44:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1556, 'learning_rate': 7.6883e-06, 'epoch': 2.23}
+
+05/19/2024 21:44:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1563, 'learning_rate': 7.5494e-06, 'epoch': 2.24}
+
+05/19/2024 21:44:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1523, 'learning_rate': 7.4114e-06, 'epoch': 2.24}
+
+05/19/2024 21:44:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1555, 'learning_rate': 7.2745e-06, 'epoch': 2.25}
+
+05/19/2024 21:44:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1519, 'learning_rate': 7.1387e-06, 'epoch': 2.26}
+
+05/19/2024 21:44:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 7.0040e-06, 'epoch': 2.27}
+
+05/19/2024 21:45:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1579, 'learning_rate': 6.8703e-06, 'epoch': 2.27}
+
+05/19/2024 21:45:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1639, 'learning_rate': 6.7377e-06, 'epoch': 2.28}
+
+05/19/2024 21:45:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1565, 'learning_rate': 6.6062e-06, 'epoch': 2.29}
+
+05/19/2024 21:45:27 - INFO - llamafactory.extras.callbacks - {'loss': 0.1519, 'learning_rate': 6.4758e-06, 'epoch': 2.30}
+
+05/19/2024 21:45:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1529, 'learning_rate': 6.3465e-06, 'epoch': 2.30}
+
+05/19/2024 21:45:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1574, 'learning_rate': 6.2184e-06, 'epoch': 2.31}
+
+05/19/2024 21:45:49 - INFO - llamafactory.extras.callbacks - {'loss': 0.1536, 'learning_rate': 6.0913e-06, 'epoch': 2.32}
+
+05/19/2024 21:45:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1649, 'learning_rate': 5.9654e-06, 'epoch': 2.32}
+
+05/19/2024 21:46:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1600, 'learning_rate': 5.8406e-06, 'epoch': 2.33}
+
+05/19/2024 21:46:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1796, 'learning_rate': 5.7170e-06, 'epoch': 2.34}
+
+05/19/2024 21:46:20 - INFO - llamafactory.extras.callbacks - {'loss': 0.1553, 'learning_rate': 5.5945e-06, 'epoch': 2.35}
+
+05/19/2024 21:46:27 - INFO - llamafactory.extras.callbacks - {'loss': 0.1538, 'learning_rate': 5.4732e-06, 'epoch': 2.35}
+
+05/19/2024 21:46:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1653, 'learning_rate': 5.3530e-06, 'epoch': 2.36}
+
+05/19/2024 21:46:36 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:46:36 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:46:36 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:48:59 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1600
+
+05/19/2024 21:49:00 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:49:00 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:49:00 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1600\tokenizer_config.json
+
+05/19/2024 21:49:00 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1600\special_tokens_map.json
+
+05/19/2024 21:49:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1520, 'learning_rate': 5.2340e-06, 'epoch': 2.37}
+
+05/19/2024 21:49:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1502, 'learning_rate': 5.1162e-06, 'epoch': 2.38}
+
+05/19/2024 21:49:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1629, 'learning_rate': 4.9996e-06, 'epoch': 2.38}
+
+05/19/2024 21:49:51 - INFO - llamafactory.extras.callbacks - {'loss': 0.1624, 'learning_rate': 4.8842e-06, 'epoch': 2.39}
+
+05/19/2024 21:50:04 - INFO - llamafactory.extras.callbacks - {'loss': 0.1604, 'learning_rate': 4.7700e-06, 'epoch': 2.40}
+
+05/19/2024 21:50:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1531, 'learning_rate': 4.6570e-06, 'epoch': 2.41}
+
+05/19/2024 21:50:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1556, 'learning_rate': 4.5453e-06, 'epoch': 2.41}
+
+05/19/2024 21:50:41 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 4.4347e-06, 'epoch': 2.42}
+
+05/19/2024 21:50:54 - INFO - llamafactory.extras.callbacks - {'loss': 0.1563, 'learning_rate': 4.3254e-06, 'epoch': 2.43}
+
+05/19/2024 21:51:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1494, 'learning_rate': 4.2173e-06, 'epoch': 2.44}
+
+05/19/2024 21:51:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1509, 'learning_rate': 4.1104e-06, 'epoch': 2.44}
+
+05/19/2024 21:51:27 - INFO - llamafactory.extras.callbacks - {'loss': 0.1551, 'learning_rate': 4.0048e-06, 'epoch': 2.45}
+
+05/19/2024 21:51:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1506, 'learning_rate': 3.9005e-06, 'epoch': 2.46}
+
+05/19/2024 21:51:49 - INFO - llamafactory.extras.callbacks - {'loss': 0.1540, 'learning_rate': 3.7974e-06, 'epoch': 2.46}
+
+05/19/2024 21:52:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1637, 'learning_rate': 3.6956e-06, 'epoch': 2.47}
+
+05/19/2024 21:52:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1531, 'learning_rate': 3.5951e-06, 'epoch': 2.48}
+
+05/19/2024 21:52:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.1507, 'learning_rate': 3.4958e-06, 'epoch': 2.49}
+
+05/19/2024 21:52:34 - INFO - llamafactory.extras.callbacks - {'loss': 0.1616, 'learning_rate': 3.3979e-06, 'epoch': 2.49}
+
+05/19/2024 21:52:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1708, 'learning_rate': 3.3012e-06, 'epoch': 2.50}
+
+05/19/2024 21:52:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1554, 'learning_rate': 3.2058e-06, 'epoch': 2.51}
+
+05/19/2024 21:52:56 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:52:56 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:52:56 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 21:55:19 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1700
+
+05/19/2024 21:55:19 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 21:55:19 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 21:55:19 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1700\tokenizer_config.json
+
+05/19/2024 21:55:19 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1700\special_tokens_map.json
+
+05/19/2024 21:55:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1545, 'learning_rate': 3.1117e-06, 'epoch': 2.52}
+
+05/19/2024 21:55:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1503, 'learning_rate': 3.0190e-06, 'epoch': 2.52}
+
+05/19/2024 21:55:47 - INFO - llamafactory.extras.callbacks - {'loss': 0.1561, 'learning_rate': 2.9275e-06, 'epoch': 2.53}
+
+05/19/2024 21:55:56 - INFO - llamafactory.extras.callbacks - {'loss': 0.1542, 'learning_rate': 2.8374e-06, 'epoch': 2.54}
+
+05/19/2024 21:56:05 - INFO - llamafactory.extras.callbacks - {'loss': 0.1672, 'learning_rate': 2.7486e-06, 'epoch': 2.55}
+
+05/19/2024 21:56:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1507, 'learning_rate': 2.6611e-06, 'epoch': 2.55}
+
+05/19/2024 21:56:24 - INFO - llamafactory.extras.callbacks - {'loss': 0.1658, 'learning_rate': 2.5750e-06, 'epoch': 2.56}
+
+05/19/2024 21:56:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1703, 'learning_rate': 2.4902e-06, 'epoch': 2.57}
+
+05/19/2024 21:56:43 - INFO - llamafactory.extras.callbacks - {'loss': 0.1520, 'learning_rate': 2.4067e-06, 'epoch': 2.58}
+
+05/19/2024 21:56:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1541, 'learning_rate': 2.3246e-06, 'epoch': 2.58}
+
+05/19/2024 21:57:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1531, 'learning_rate': 2.2439e-06, 'epoch': 2.59}
+
+05/19/2024 21:57:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1538, 'learning_rate': 2.1645e-06, 'epoch': 2.60}
+
+05/19/2024 21:57:15 - INFO - llamafactory.extras.callbacks - {'loss': 0.1492, 'learning_rate': 2.0865e-06, 'epoch': 2.61}
+
+05/19/2024 21:57:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1605, 'learning_rate': 2.0099e-06, 'epoch': 2.61}
+
+05/19/2024 21:57:30 - INFO - llamafactory.extras.callbacks - {'loss': 0.1515, 'learning_rate': 1.9346e-06, 'epoch': 2.62}
+
+05/19/2024 21:57:37 - INFO - llamafactory.extras.callbacks - {'loss': 0.1561, 'learning_rate': 1.8607e-06, 'epoch': 2.63}
+
+05/19/2024 21:57:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1639, 'learning_rate': 1.7882e-06, 'epoch': 2.63}
+
+05/19/2024 21:57:52 - INFO - llamafactory.extras.callbacks - {'loss': 0.1578, 'learning_rate': 1.7171e-06, 'epoch': 2.64}
+
+05/19/2024 21:58:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 1.6473e-06, 'epoch': 2.65}
+
+05/19/2024 21:58:08 - INFO - llamafactory.extras.callbacks - {'loss': 0.1530, 'learning_rate': 1.5790e-06, 'epoch': 2.66}
+
+05/19/2024 21:58:08 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 21:58:08 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 21:58:08 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 22:00:31 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1800
+
+05/19/2024 22:00:32 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 22:00:32 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 22:00:32 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1800\tokenizer_config.json
+
+05/19/2024 22:00:32 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1800\special_tokens_map.json
+
+05/19/2024 22:00:45 - INFO - llamafactory.extras.callbacks - {'loss': 0.1528, 'learning_rate': 1.5121e-06, 'epoch': 2.66}
+
+05/19/2024 22:00:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1527, 'learning_rate': 1.4466e-06, 'epoch': 2.67}
+
+05/19/2024 22:01:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1548, 'learning_rate': 1.3825e-06, 'epoch': 2.68}
+
+05/19/2024 22:01:23 - INFO - llamafactory.extras.callbacks - {'loss': 0.1573, 'learning_rate': 1.3198e-06, 'epoch': 2.69}
+
+05/19/2024 22:01:36 - INFO - llamafactory.extras.callbacks - {'loss': 0.1580, 'learning_rate': 1.2585e-06, 'epoch': 2.69}
+
+05/19/2024 22:01:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1568, 'learning_rate': 1.1986e-06, 'epoch': 2.70}
+
+05/19/2024 22:02:01 - INFO - llamafactory.extras.callbacks - {'loss': 0.1520, 'learning_rate': 1.1402e-06, 'epoch': 2.71}
+
+05/19/2024 22:02:13 - INFO - llamafactory.extras.callbacks - {'loss': 0.1730, 'learning_rate': 1.0832e-06, 'epoch': 2.72}
+
+05/19/2024 22:02:26 - INFO - llamafactory.extras.callbacks - {'loss': 0.1527, 'learning_rate': 1.0276e-06, 'epoch': 2.72}
+
+05/19/2024 22:02:38 - INFO - llamafactory.extras.callbacks - {'loss': 0.1551, 'learning_rate': 9.7344e-07, 'epoch': 2.73}
+
+05/19/2024 22:02:49 - INFO - llamafactory.extras.callbacks - {'loss': 0.1505, 'learning_rate': 9.2073e-07, 'epoch': 2.74}
+
+05/19/2024 22:03:00 - INFO - llamafactory.extras.callbacks - {'loss': 0.1629, 'learning_rate': 8.6946e-07, 'epoch': 2.75}
+
+05/19/2024 22:03:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1522, 'learning_rate': 8.1963e-07, 'epoch': 2.75}
+
+05/19/2024 22:03:21 - INFO - llamafactory.extras.callbacks - {'loss': 0.1531, 'learning_rate': 7.7125e-07, 'epoch': 2.76}
+
+05/19/2024 22:03:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1567, 'learning_rate': 7.2432e-07, 'epoch': 2.77}
+
+05/19/2024 22:03:43 - INFO - llamafactory.extras.callbacks - {'loss': 0.1540, 'learning_rate': 6.7884e-07, 'epoch': 2.77}
+
+05/19/2024 22:03:54 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 6.3482e-07, 'epoch': 2.78}
+
+05/19/2024 22:04:06 - INFO - llamafactory.extras.callbacks - {'loss': 0.1541, 'learning_rate': 5.9225e-07, 'epoch': 2.79}
+
+05/19/2024 22:04:17 - INFO - llamafactory.extras.callbacks - {'loss': 0.1544, 'learning_rate': 5.5114e-07, 'epoch': 2.80}
+
+05/19/2024 22:04:28 - INFO - llamafactory.extras.callbacks - {'loss': 0.1514, 'learning_rate': 5.1150e-07, 'epoch': 2.80}
+
+05/19/2024 22:04:28 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 22:04:28 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 22:04:28 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 22:06:51 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1900
+
+05/19/2024 22:06:52 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 22:06:52 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 22:06:52 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1900\tokenizer_config.json
+
+05/19/2024 22:06:52 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-1900\special_tokens_map.json
+
+05/19/2024 22:07:02 - INFO - llamafactory.extras.callbacks - {'loss': 0.1511, 'learning_rate': 4.7332e-07, 'epoch': 2.81}
+
+05/19/2024 22:07:12 - INFO - llamafactory.extras.callbacks - {'loss': 0.1522, 'learning_rate': 4.3661e-07, 'epoch': 2.82}
+
+05/19/2024 22:07:21 - INFO - llamafactory.extras.callbacks - {'loss': 0.1539, 'learning_rate': 4.0137e-07, 'epoch': 2.83}
+
+05/19/2024 22:07:30 - INFO - llamafactory.extras.callbacks - {'loss': 0.1614, 'learning_rate': 3.6759e-07, 'epoch': 2.83}
+
+05/19/2024 22:07:39 - INFO - llamafactory.extras.callbacks - {'loss': 0.1573, 'learning_rate': 3.3530e-07, 'epoch': 2.84}
+
+05/19/2024 22:07:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1664, 'learning_rate': 3.0447e-07, 'epoch': 2.85}
+
+05/19/2024 22:07:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1543, 'learning_rate': 2.7513e-07, 'epoch': 2.86}
+
+05/19/2024 22:08:07 - INFO - llamafactory.extras.callbacks - {'loss': 0.1683, 'learning_rate': 2.4726e-07, 'epoch': 2.86}
+
+05/19/2024 22:08:16 - INFO - llamafactory.extras.callbacks - {'loss': 0.1563, 'learning_rate': 2.2087e-07, 'epoch': 2.87}
+
+05/19/2024 22:08:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1621, 'learning_rate': 1.9597e-07, 'epoch': 2.88}
+
+05/19/2024 22:08:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1554, 'learning_rate': 1.7255e-07, 'epoch': 2.89}
+
+05/19/2024 22:08:40 - INFO - llamafactory.extras.callbacks - {'loss': 0.1648, 'learning_rate': 1.5062e-07, 'epoch': 2.89}
+
+05/19/2024 22:08:48 - INFO - llamafactory.extras.callbacks - {'loss': 0.1542, 'learning_rate': 1.3017e-07, 'epoch': 2.90}
+
+05/19/2024 22:08:55 - INFO - llamafactory.extras.callbacks - {'loss': 0.1514, 'learning_rate': 1.1121e-07, 'epoch': 2.91}
+
+05/19/2024 22:09:03 - INFO - llamafactory.extras.callbacks - {'loss': 0.1656, 'learning_rate': 9.3733e-08, 'epoch': 2.92}
+
+05/19/2024 22:09:11 - INFO - llamafactory.extras.callbacks - {'loss': 0.1549, 'learning_rate': 7.7751e-08, 'epoch': 2.92}
+
+05/19/2024 22:09:18 - INFO - llamafactory.extras.callbacks - {'loss': 0.1672, 'learning_rate': 6.3259e-08, 'epoch': 2.93}
+
+05/19/2024 22:09:25 - INFO - llamafactory.extras.callbacks - {'loss': 0.1527, 'learning_rate': 5.0259e-08, 'epoch': 2.94}
+
+05/19/2024 22:09:33 - INFO - llamafactory.extras.callbacks - {'loss': 0.1556, 'learning_rate': 3.8751e-08, 'epoch': 2.94}
+
+05/19/2024 22:09:42 - INFO - llamafactory.extras.callbacks - {'loss': 0.1543, 'learning_rate': 2.8736e-08, 'epoch': 2.95}
+
+05/19/2024 22:09:42 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 22:09:42 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 22:09:42 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 22:12:05 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-2000
+
+05/19/2024 22:12:06 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 22:12:06 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 22:12:06 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-2000\tokenizer_config.json
+
+05/19/2024 22:12:06 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-2000\special_tokens_map.json
+
+05/19/2024 22:12:19 - INFO - llamafactory.extras.callbacks - {'loss': 0.1515, 'learning_rate': 2.0215e-08, 'epoch': 2.96}
+
+05/19/2024 22:12:31 - INFO - llamafactory.extras.callbacks - {'loss': 0.1628, 'learning_rate': 1.3188e-08, 'epoch': 2.97}
+
+05/19/2024 22:12:44 - INFO - llamafactory.extras.callbacks - {'loss': 0.1540, 'learning_rate': 7.6561e-09, 'epoch': 2.97}
+
+05/19/2024 22:12:57 - INFO - llamafactory.extras.callbacks - {'loss': 0.1668, 'learning_rate': 3.6188e-09, 'epoch': 2.98}
+
+05/19/2024 22:13:10 - INFO - llamafactory.extras.callbacks - {'loss': 0.1516, 'learning_rate': 1.0767e-09, 'epoch': 2.99}
+
+05/19/2024 22:13:22 - INFO - llamafactory.extras.callbacks - {'loss': 0.1519, 'learning_rate': 2.9908e-11, 'epoch': 3.00}
+
+05/19/2024 22:13:25 - INFO - transformers.trainer - 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+05/19/2024 22:13:25 - INFO - transformers.trainer - Loading best model from saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\checkpoint-2000 (score: 0.1562039852142334).
+
+05/19/2024 22:13:25 - INFO - transformers.trainer - Saving model checkpoint to saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13
+
+05/19/2024 22:13:25 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at C:\Users\zv750\.cache\huggingface\hub\models--hfl--chinese-llama-2-1.3b\snapshots\99f0fa34dfcdcd1497efdcefce45712cd9fed9ea\config.json
+
+05/19/2024 22:13:25 - INFO - transformers.configuration_utils - Model config LlamaConfig {
+  "_name_or_path": "meta-llama/Llama-2-7b-hf",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 11008,
+  "max_length": 4096,
+  "max_position_embeddings": 4096,
+  "mlp_bias": false,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 4,
+  "num_key_value_heads": 32,
+  "pad_token_id": 0,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 55296
+}
+
+
+05/19/2024 22:13:25 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\tokenizer_config.json
+
+05/19/2024 22:13:25 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves\ChineseLLaMA2-1.3B\lora\train_2024-05-19-19-22-13\special_tokens_map.json
+
+05/19/2024 22:13:26 - INFO - transformers.trainer - ***** Running Evaluation *****
+
+05/19/2024 22:13:26 - INFO - transformers.trainer -   Num examples = 2710
+
+05/19/2024 22:13:26 - INFO - transformers.trainer -   Batch size = 2
+
+05/19/2024 22:15:48 - INFO - transformers.modelcard - Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+
